@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Candidat - LINKUP RH</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="espace-candidat.css">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="découvrir.html">Nous découvrir</a></li>
+                <li><a href="expertise.html">Notre Expertise</a></li>
+                <li><a href="espace-candidat.html" class="active">Espace Candidat</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1>Espace Candidat</h1>
+                <hr class="title-hr">
+            </div>
+            <div class="hero-subtitle">
+                <p>Rejoignez notre communauté de talents et donnez un élan à votre carrière</p>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="candidate-content">
+        <div class="content-wrapper">
+            <!-- Introduction Section -->
+            <div class="intro-section">
+                <div class="intro-card">
+                    <div class="intro-header">
+                        <i class="fas fa-rocket"></i>
+                        <h2>Propulsez votre carrière</h2>
+                    </div>
+                    <p>Chez LINKUP RH, nous croyons que chaque talent mérite sa chance. Déposez votre candidature spontanée et intégrez notre base de données de candidats d'exception.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-search"></i>
+                            <h4>Opportunités exclusives</h4>
+                            <p>Accès privilégié à nos offres d'emploi</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Accompagnement personnalisé</h4>
+                            <p>Suivi individualisé par nos consultants</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Évolution de carrière</h4>
+                            <p>Conseils et coaching professionnel</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Réseau d'entreprises</h4>
+                            <p>Connexion directe avec nos partenaires</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <i class="fas fa-user-plus"></i>
+                        <h2>Candidature Spontanée</h2>
+                        <p>Complétez le formulaire ci-dessous pour rejoindre notre vivier de talents</p>
+                    </div>
+
+                    <form 
+                        id="candidateForm"
+                        action="https://usebasin.com/f/7529e462168d"
+                        method="POST" 
+                        enctype="multipart/form-data"
+                        class="candidate-form"
+                    >
+                        <!-- Informations personnelles -->
+                        <div class="form-section-title">
+                            <i class="fas fa-user"></i>
+                            <h3>Informations personnelles</h3>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Adresse email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Localisation *</label>
+                            <input type="text" id="location" name="location" placeholder="Ville, Région" required>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <!-- Informations professionnelles -->
+                        <div class="form-section-title">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Profil professionnel</h3>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="currentPosition">Poste actuel</label>
+                                <input type="text" id="currentPosition" name="currentPosition" placeholder="Votre fonction actuelle">
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">Années d'expérience *</label>
+                                <select id="experience" name="experience" required>
+                                    <option value="">Sélectionnez</option>
+                                    <option value="0-1">0-1 an</option>
+                                    <option value="2-3">2-3 ans</option>
+                                    <option value="4-5">4-5 ans</option>
+                                    <option value="6-10">6-10 ans</option>
+                                    <option value="10+">Plus de 10 ans</option>
+                                </select>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="targetPosition">Poste recherché *</label>
+                                <input type="text" id="targetPosition" name="targetPosition" placeholder="Type de poste souhaité" required>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="availability">Disponibilité *</label>
+                                <select id="availability" name="availability" required>
+                                    <option value="">Sélectionnez</option>
+                                    <option value="immediate">Immédiate</option>
+                                    <option value="1-month">Dans 1 mois</option>
+                                    <option value="2-3-months">2-3 mois</option>
+                                    <option value="negotiable">À négocier</option>
+                                </select>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">Compétences clés</label>
+                            <textarea id="skills" name="skills" rows="3" placeholder="Listez vos principales compétences techniques et métier..."></textarea>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <!-- Documents -->
+                        <div class="form-section-title">
+                            <i class="fas fa-file-upload"></i>
+                            <h3>Documents</h3>
+                        </div>
+
+                        <div class="file-upload-section">
+                            <div class="file-upload-group">
+                                <label for="cv" class="file-upload-label">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span class="file-label-text">
+                                        <strong>CV (PDF uniquement) *</strong>
+                                        <small>Maximum 5MB</small>
+                                    </span>
+                                </label>
+                                <input type="file" id="cv" name="cv" accept="application/pdf" required class="file-input">
+                                <div class="file-info" id="cvInfo"></div>
+                            </div>
+
+                            <div class="file-upload-group">
+                                <label for="coverLetter" class="file-upload-label optional">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="file-label-text">
+                                        <strong>Lettre de motivation (PDF)</strong>
+                                        <small>Optionnel - Maximum 5MB</small>
+                                    </span>
+                                </label>
+                                <input type="file" id="coverLetter" name="coverLetter" accept="application/pdf" class="file-input">
+                                <div class="file-info" id="coverLetterInfo"></div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-section-title">
+                            <i class="fas fa-comment"></i>
+                            <h3>Message</h3>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Présentez-vous</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Parlez-nous de vos motivations, projets professionnels et pourquoi vous souhaitez rejoindre notre réseau..."></textarea>
+                            <span class="form-line"></span>
+                        </div>
+
+                        <!-- Consentements -->
+                        <div class="consent-section">
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="dataConsent" name="dataConsent" required class="checkbox-input">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">J'accepte que mes données personnelles soient traitées par LINKUP RH dans le cadre de ma candidature *</span>
+                                </label>
+                                <div class="checkbox-error" id="dataConsentError">Ce champ est obligatoire</div>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="newsletterConsent" name="newsletterConsent" class="checkbox-input">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Je souhaite recevoir des informations sur les opportunités d'emploi correspondant à mon profil</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">
+                            <span>Envoyer ma candidature</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Candidature envoyée !</h3>
+            <p>Merci pour votre candidature. Nos consultants examineront votre profil et vous recontacteront rapidement si des opportunités correspondent à votre profil.</p>
+            <button class="close-success" onclick="closeSuccessMessage()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><span>Prenez l'avantage, contactez-nous !</span></p>
+        <span><hr></span>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+            <div class="infos">
+                <h2>Agence Paris</h2>
+                <p><i class="fa-solid fa-location-dot"></i> 47, boulevard de Courcelles</p>
+                <p>75008 Paris</p>
+                <p><i class="fa-solid fa-phone"></i> 06 10 84 00 43</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@linkup-rh.fr</p>
+            </div>
+            <div class="site-map">
+                <h2>Site Map</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="découvrir.html"><i class="fas fa-users"></i> Nous découvrir</a></li>
+                    <li><a href="expertise.html"><i class="fas fa-cogs"></i> Notre Expertise</a></li>
+                    <li><a href="espace-candidat.html"><i class="fas fa-user-tie"></i> Espace Candidat</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <div class="copyright-divider"></div>
+            <div class="copyright-content">
+                <div class="copyright-text">
+                    <p>&copy; 2025 LINKUP RH. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="espace-candidat.js"></script>
+</body>
+</html>

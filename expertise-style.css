@@ -1,0 +1,1340 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    color: #f1f1f1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: #f1f1f1;
+    width: 100%;
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+}
+
+i {
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+span {
+    color: #00ccff;
+}
+
+/* Container unifié */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVBAR UNIFIÉ */
+nav {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav .logo {
+    width: 200px;
+    height: 80px;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav .navlinks {
+    display: flex;
+    align-items: center;
+}
+
+nav .navlinks a.active {
+    color: #00ccff;
+}
+nav .navlinks a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #007bff, #00ccff);
+}
+nav .navlinks ul {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav .navlinks li {
+    list-style: none;
+}
+
+nav .navlinks a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    letter-spacing: 0.3px;
+    position: relative;
+
+}
+
+nav .navlinks a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #f1f1f1;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Premiere Section --> Services */
+.first-section {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    margin-top: 100px;
+    padding: 50px 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.first-section .title {
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+    color: #f1f1f1;
+}
+
+.first-section .title h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.first-section .title hr {
+    width: 100px;
+    max-width: 100px;
+    margin: 10px 0;
+}
+
+.first-section .subtitle {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+
+.first-section .subtitle p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+/* Content wrapper unifié */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Sections avec texte et images */
+.rapidite,
+.ecoute,
+.confiance,
+.experience,
+.parle {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 65vh;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.rapidite .content-text,
+.ecoute .text,
+.confiance .text,
+.experience .text,
+.parle .text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.rapidite .title,
+.ecoute .title,
+.confiance .title,
+.experience .title,
+.parle .title {
+    margin-bottom: 20px;
+}
+
+.rapidite .title h2,
+.ecoute .text h2,
+.confiance .text h2,
+.experience .text h2,
+.parle .text .title h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.rapidite .subtitle p,
+.ecoute .text .subtitle p,
+.confiance .text .subtitle p,
+.experience .text .subtitle p,
+.parle .text .subtitle p,
+.parle .text .paragraph p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.5;
+    color: #f1f1f1;
+}
+
+.rapidite .img,
+.ecoute .img,
+.confiance .img,
+.experience .img,
+.parle .img {
+    flex: 1;
+    max-width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.rapidite .img img,
+.ecoute .img img,
+.confiance .img img,
+.experience .img img,
+.parle .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.rapidite .img img:hover,
+.ecoute .img img:hover,
+.confiance .img img:hover,
+.experience .img img:hover,
+.parle .img img:hover {
+    transform: scale(1.05);
+}
+
+/* Services CTA Button */
+.services-cta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0 20px 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #007bff 0%, #2950ff 100%);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(3, 172, 243, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(3, 172, 243, 0.4);
+    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+    color: #ffffff;
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(3, 172, 243, 0.4);
+}
+
+.cta-button i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    color: #ffffff;
+}
+
+.cta-button:hover i {
+    transform: scale(1.1);
+}
+
+/* Sixieme section - Recrutement */
+.recrutement {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 65vh;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.recrutement .text {
+    color: #f1f1f1;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.recrutement .text h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.recrutement .text .subtitle p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.5;
+    color: #f1f1f1;
+}
+
+.recrutement .img {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.recrutement .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Septieme et huitieme sections */
+.section-container {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.main-title {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: -1px;
+    z-index: 10;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px;
+    padding: 0 20px;
+}
+
+.content-wrapper-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px;
+    padding: 0 20px;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    min-height: 100%;
+    transform: translateX(-50%);
+    background-image: url('assets/img/serrage2main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-image-2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    min-height: 100%;
+    transform: translateX(-50%);
+    background-image: url('assets/img/informatique.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.text-card {
+    background: linear-gradient(135deg, #4a90a4 0%, #357a8d 100%);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #87ceeb;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.card-text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Neuvieme section */
+.text-section {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.text-section h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.5;
+    max-width: 1000px;
+    width: 100%;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.text-section .blue {
+    color: #ffffff;
+}
+
+/* Section recrutement-pro */
+.recrutement-pro {
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+.recrutement-pro .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.recrutement-pro .wrapper .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.recrutement-pro .wrapper .card.card-text {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.recrutement-pro .wrapper .card .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recrutement-pro .wrapper .card .text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.recrutement-pro .wrapper .card .text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.recrutement-pro .wrapper .card .img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recrutement-pro .wrapper .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.recrutement-pro .wrapper .card img:hover {
+    transform: scale(1.05);
+}
+
+/* Section divider */
+.section-divider {
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 80px auto;
+}
+
+/* Footer unifié */
+footer {
+    width: 100%;
+    color: #f1f1f1;
+    padding: 40px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+footer p span {
+    font-size: 2.5rem;
+    color: #00ccff;
+}
+
+footer span hr {
+    background-color: #00ccff;
+    width: 10%;
+    max-width: 200px;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+}
+
+footer > p,
+footer > span {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+footer .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+footer .logo img {
+    width: 70%;
+    height: auto;
+}
+
+footer .infos {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    gap: 5px;
+}
+
+footer .footer-content .infos h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+footer .infos i {
+    color: #00ccff;
+}
+
+footer .site-map {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .site-map h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+footer .site-map ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .site-map li {
+    margin-bottom: 6px;
+}
+
+footer .site-map a {
+    color: #f1f1f1;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer .site-map a:hover {
+    color: #00ccff;
+}
+
+footer .site-map a i {
+    color: #00ccff;
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer .site-map a:hover i {
+    transform: scale(1.2);
+}
+
+/* COPYRIGHT SECTION */
+.copyright {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.copyright-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin-bottom: 30px;
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright-text {
+    flex: 1;
+}
+
+.copyright-text p {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.copyright-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright-links a {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.copyright-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #007bff, #00ccff);
+    transition: width 0.3s ease;
+}
+
+.copyright-links a:hover {
+    color: #00ccff;
+    transform: translateY(-1px);
+}
+
+.copyright-links a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablettes */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    nav .logo {
+        width: 180px;
+        height: 60px;
+    }
+    
+    nav .navlinks ul {
+        gap: 25px;
+        margin: 0 40px;
+    }
+    
+    nav .navlinks a {
+        font-size: 15px;
+    }
+    
+    .first-section .title h1 {
+        font-size: 2.8rem;
+    }
+    
+    .rapidite .title h2,
+    .ecoute .text h2,
+    .confiance .text h2,
+    .experience .text h2,
+    .parle .text .title h2 {
+        font-size: 3rem;
+    }
+    
+    .rapidite .img,
+    .ecoute .img,
+    .confiance .img,
+    .experience .img,
+    .parle .img {
+        height: 350px;
+    }
+    
+    .text-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .recrutement .text h2 {
+        font-size: 3rem;
+    }
+    
+    .main-title {
+        font-size: 40px;
+        top: 60px;
+    }
+    
+    .text-card {
+        max-width: 350px;
+        padding: 35px;
+    }
+    
+    .recrutement-pro .wrapper {
+        gap: 25px;
+    }
+}
+
+/* Mobile et tablettes */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    nav .logo {
+        width: 180px;
+        height: 60px;
+    }
+    
+    /* Navigation responsive */
+    nav .navlinks {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    nav .navlinks.active {
+        left: 0;
+    }
+
+    nav .navlinks ul {
+        flex-direction: column;
+        margin: 50px 0;
+        gap: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .navlinks li {
+        width: 100%;
+    }
+
+    nav .navlinks a {
+        font-size: 18px;
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Sections responsive */
+    .first-section {
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+    
+    .first-section .title h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .first-section .subtitle p {
+        font-size: 1.1rem;
+    }
+    
+    /* Sections avec images et texte */
+    .rapidite,
+    .ecoute,
+    .confiance,
+    .experience,
+    .parle {
+        padding: 30px 0;
+        min-height: auto;
+    }
+
+    .content-wrapper,
+    .content-wrapper.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .rapidite .content-text,
+    .ecoute .text,
+    .confiance .text,
+    .experience .text,
+    .parle .text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .rapidite .img,
+    .ecoute .img,
+    .confiance .img,
+    .experience .img,
+    .parle .img {
+        max-width: 100%;
+        width: 100%;
+        height: 300px;
+    }
+    
+    .rapidite .title h2,
+    .ecoute .text h2,
+    .confiance .text h2,
+    .experience .text h2,
+    .parle .text .title h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .rapidite .subtitle p,
+    .ecoute .text .subtitle p,
+    .confiance .text .subtitle p,
+    .experience .text .subtitle p,
+    .parle .text .subtitle p,
+    .parle .text .paragraph p {
+        font-size: 1.1rem;
+        line-height: 2;
+    }
+
+    .services-cta {
+        justify-content: center;
+        margin: 30px 0 20px 0;
+    }
+    
+    /* Section recrutement */
+    .recrutement {
+        padding: 30px 0;
+    }
+    
+    .recrutement .text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .recrutement .text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .recrutement .text .subtitle p {
+        font-size: 1.5rem;
+    }
+    
+    .recrutement .img {
+        height: 350px;
+    }
+    
+    /* Section container */
+    .section-container {
+        min-height: 80vh;
+        padding: 80px 0;
+    }
+    
+    .main-title {
+        font-size: 28px;
+        top: 30px;
+        left: 20px;
+    }
+    
+    .content-wrapper,
+    .content-wrapper-2 {
+        justify-content: center;
+        padding: 0 20px;
+    }
+    
+    .text-card {
+        max-width: 100%;
+        min-height: 400px;
+        padding: 30px 25px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+    }
+    
+    .card-text {
+        font-size: 13px;
+    }
+    
+    /* Section texte */
+    .text-section {
+        padding: 30px 0;
+        min-height: 40vh;
+    }
+    
+    .text-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .text-section p {
+        font-size: 1.1rem;
+        line-height: 2.2;
+    }
+    
+    /* Section recrutement pro */
+    .recrutement-pro {
+        padding: 30px 0;
+    }
+    
+    .recrutement-pro .wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .recrutement-pro .wrapper .card {
+        min-height: 250px;
+    }
+
+    .recrutement-pro .wrapper .card.card-text {
+        padding: 25px;
+    }
+    
+    .recrutement-pro .wrapper .card .title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .recrutement-pro .wrapper .card .text,
+    .recrutement-pro .wrapper .card .text p {
+        font-size: 1.1rem;
+    }
+
+    .recrutement-pro .wrapper .card .img {
+        height: 200px;
+    }
+    
+    /* Footer responsive */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    footer .logo {
+        justify-content: center;
+    }
+    
+    footer .logo img {
+        width: 60%;
+    }
+    
+    footer .site-map {
+        align-items: center;
+    }
+    
+    footer .footer-content .infos h2,
+    footer .site-map h2 {
+        font-size: 1.8rem;
+    }
+    
+    footer p span {
+        font-size: 2.2rem;
+    }
+    
+    /* Copyright responsive */
+    .copyright-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 20px 25px 20px;
+    }
+    
+    .copyright-links {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Petits mobiles */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    nav {
+        padding: 0 15px;
+    }
+    
+    nav .logo {
+        width: 180px;
+        height: 60px;
+    }
+    
+    .first-section .title h1 {
+        font-size: 1.9rem;
+    }
+    
+    .rapidite .title h2,
+    .ecoute .text h2,
+    .confiance .text h2,
+    .experience .text h2,
+    .parle .text .title h2 {
+        font-size: 2.2rem;
+    }
+    
+    .rapidite .img,
+    .ecoute .img,
+    .confiance .img,
+    .experience .img,
+    .parle .img {
+        height: 250px;
+    }
+    
+    .recrutement .text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .recrutement .text .subtitle p {
+        font-size: 1.3rem;
+    }
+
+    .recrutement .img {
+        height: 300px;
+    }
+    
+    .text-section h2 {
+        font-size: 1.9rem;
+    }
+    
+    .main-title {
+        font-size: 22px;
+        top: 25px;
+        left: 15px;
+    }
+    
+    .text-card {
+        padding: 25px 20px;
+        min-height: 350px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-text {
+        font-size: 12px;
+    }
+    
+    .recrutement-pro .wrapper {
+        padding: 0 15px;
+    }
+
+    .recrutement-pro .wrapper .card.card-text {
+        padding: 20px;
+    }
+    
+    .recrutement-pro .wrapper .card .title {
+        font-size: 1.3rem;
+    }
+    
+    .recrutement-pro .wrapper .card .text,
+    .recrutement-pro .wrapper .card .text p {
+        font-size: 1rem;
+    }
+
+    .recrutement-pro .wrapper .card .img {
+        height: 180px;
+    }
+    
+    .copyright-content {
+        padding: 0 15px 20px 15px;
+    }
+    
+    .copyright-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .copyright-text p,
+    .copyright-links a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 320px) {
+    nav .logo {
+        width: 110px;
+        height: 40px;
+    }
+    
+    .first-section .title h1 {
+        font-size: 1.7rem;
+    }
+    
+    .rapidite .title h2,
+    .ecoute .text h2,
+    .confiance .text h2,
+    .experience .text h2,
+    .parle .text .title h2 {
+        font-size: 2rem;
+    }
+    
+    .rapidite .img,
+    .ecoute .img,
+    .confiance .img,
+    .experience .img,
+    .parle .img {
+        height: 220px;
+    }
+    
+    .text-section h2 {
+        font-size: 1.7rem;
+    }
+    
+    .main-title {
+        font-size: 18px;
+        top: 20px;
+        left: 10px;
+    }
+    
+    .text-card {
+        padding: 20px 15px;
+        min-height: 320px;
+    }
+
+    .recrutement-pro .wrapper .card .img {
+        height: 160px;
+    }
+    
+    .copyright-content {
+        padding: 0 10px 15px 10px;
+    }
+    
+    .copyright-text p,
+    .copyright-links a {
+        font-size: 0.8rem;
+    }
+}

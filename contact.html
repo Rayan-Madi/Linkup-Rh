@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LINKUP RH</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="découvrir.html">Nous découvrir</a></li>
+                <li><a href="expertise.html"></i> Notre Expertise</a></li>
+                <li><a href="espace-candidat.html">Espace Candidat</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1>Contactez-nous</h1>
+                <hr class="title-hr">
+            </div>
+            <div class="hero-subtitle">
+                <p>Prenons contact pour discuter de vos besoins en recrutement</p>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <div class="form-header">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nom *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="form-line"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                            <span class="form-line"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Entreprise</label>
+                        <input type="text" id="company" name="company">
+                        <span class="form-line"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="recrutement">Recrutement d'experts</option>
+                            <option value="rpo">Prestation RPO</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                        <span class="form-line"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Décrivez-nous votre projet..."></textarea>
+                        <span class="form-line"></span>
+                    </div>
+                    
+                    <!-- CASE À COCHER CORRIGÉE -->
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="consent" name="consent" required class="checkbox-input">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande *</span>
+                        </label>
+                        <div class="checkbox-error" id="consentError">Ce champ est obligatoire</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-section">
+                <div class="contact-card">
+                    <div class="card-header">
+                        <h3>Nos coordonnées</h3>
+                        <div class="card-decoration"></div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>47, boulevard de Courcelles<br>75008 Paris</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:0610840043">06 10 84 00 43</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@linkup-rh.fr">contact@linkup-rh.fr</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horaires</h4>
+                            <p>Lundi - Vendredi<br>9h00 - 18h00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CARTE INTERACTIVE FONCTIONNELLE -->
+                <div class="map-section">
+                    <div class="map-header">
+                        <h3>Nous trouver</h3>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            id="googleMap"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2596515897486!2d2.31188!3d48.8801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fda2e8c0b9d%3A0x8b1a5c9d0e8c4f5a!2s47%20Boulevard%20de%20Courcelles%2C%2075008%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1640995200000!5m2!1sen!2sfr"
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 0 0 20px 20px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- Fallback pour si l'iframe ne charge pas -->
+                        <div class="map-fallback" style="display: none;">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Carte interactive</p>
+                                <span>47, boulevard de Courcelles, 75008 Paris</span>
+                                <button class="map-btn" onclick="openGoogleMaps()">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ouvrir dans Google Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Nous vous répondrons dans les plus brefs délais.</p>
+            <button class="close-success" onclick="closeSuccessMessage()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><span>Prenez l'avantage, contactez-nous !</span></p>
+        <span><hr></span>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+            <div class="infos">
+                <h2>Agence Paris</h2>
+                <p><i class="fa-solid fa-location-dot"></i> 47, boulevard de Courcelles</p>
+                <p>75008 Paris</p>
+                <p><i class="fa-solid fa-phone"></i> 06 10 84 00 43</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@linkup-rh.fr</p>
+            </div>
+             <div class="site-map">
+                <h2>Site Map</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="découvrir.html"><i class="fas fa-users"></i> Nous découvrir</a></li>
+                    <li><a href="expertise.html"><i class="fas fa-cogs"></i> Notre Expertise</a></li>
+                    <li><a href="espace-candidat.html"><i class="fas fa-user-tie"></i> Espace Candidat</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <div class="copyright-divider"></div>
+            <div class="copyright-content">
+                <div class="copyright-text">
+                    <p>&copy; 2025 LINKUP RH. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

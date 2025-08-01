@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="expertise-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Notre Expertise - Linkup-rh</title>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo ">
+        </div>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="découvrir.html">Nous découvrir</a></li>
+                <li><a href="expertise.html" class="active">Notre Expertise</a></li>
+                <li><a href="espace-candidat.html">Espace Candidat</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Première section - Header -->
+    <section class="first-section" id="first-section">
+        <div class="container">
+            <div class="title">
+                <h1>Notre Expertise</h1>
+                <hr class="title-hr">
+            </div>
+            <div class="subtitle">
+                <p>Découvrez notre approche professionnelle du recrutement</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section Recrutement d'experts -->
+    <section class="recrutement" id="recrutement">
+        <div class="container">
+            <div class="text">
+                <div class="title">
+                    <h2>#Recrutement d'experts</h2>
+                </div>
+                <div class="subtitle">
+                    <p>Comment ça marche ?</p>
+                </div>
+            </div>
+            <div class="img">
+                <img src="assets/img/schéma.PNG" alt="Processus de recrutement">
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section L'approche directe -->
+    <div class="section-container">
+        <div class="container">
+            <h1 class="main-title">#L'approche directe</h1>
+            <div class="content-wrapper">
+                <div class="background-image"></div>
+                <div class="text-card">
+                    <h2 class="card-title">Une recherche ciblée</h2>
+                    <p class="card-text">
+                        LINKUP RH dispose des ressources humaines, de l'expertise et du savoir-faire nécessaires pour
+                        identifier les meilleurs talents dits passifs partout en France.
+                    </p>
+                    <p class="card-text">
+                        L'approche directe est pertinente lorsqu'il est difficile de trouver le profil recherché sur le
+                        marché. Elle se caractérise par une démarche confidentielle visant à contacter les candidats de
+                        manière discrète.
+                    </p>
+                    <p class="card-text">
+                        Cette démarche exige un réseau étendu, une compréhension approfondie des besoins de l'entreprise et
+                        une grande compétence dans la communication et la persuasion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Le sourcing -->
+    <div class="section-container">
+        <div class="container">
+            <h1 class="main-title">#Le sourcing</h1>
+            <div class="content-wrapper-2">
+                <div class="background-image-2"></div>
+                <div class="text-card">
+                    <h2 class="card-title">Un subtil dosage d'IA et d'automation</h2>
+                    <p class="card-text">
+                        Nous utilisons les CVThèques, les réseaux sociaux et de multiples sources de candidats
+                        pour atteindre les profils actifs.
+                    </p>
+                    <p class="card-text">
+                        Nous mettons en œuvre une stratégie de diffusion étendue sur les jobboards les plus
+                        pertinents du marché dans le but d'assurer une visibilité maximale pour nos annonces.
+                    </p>
+                    <p class="card-text">
+                        Le parsing et le matching sont effectués par nos outils, ce qui permet un meilleur ciblage.
+                    </p>
+                    <p class="card-text">
+                        Cette approche vise à toucher un public diversifié et qualifié, optimisant ainsi nos
+                        chances de trouver des profils correspondant parfaitement à vos recherches.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Onboarding -->
+    <section class="text-section" id="text">
+        <div class="container">
+            <h2>De la prise de besoin jusqu'à l'onboarding de votre talents</h2>
+            <p>Le recrutement ne s'arrête pas la signature du contrat de travail du candidat
+                L'onboarding est une étape importante et nous continuons à vous accompagner jusqu'à la
+                fin de la période d'essaie sur laquelle nous sommes engagés</p>
+            <h2><span>Chez LINKUP RH, nos promesses nous les tenons !</span></h2>
+            <p class="blue">Tous nos contrats sont au succès et basés sur la réussite
+                Par conséquent, il est essentiel de vous trouver le bon candidat
+            </p>
+        </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="parle" id="parle">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text">
+                    <div class="title">
+                        <h2>On en parle ?</h2>
+                    </div>
+                    <div class="subtitle">
+                        <p>Une équipe à votre écoute</p>
+                    </div>
+                    <div class="paragraph">
+                        <p>À la recherche de nouveaux talents pour renforcer vos équipes ?</p>
+                        <br>
+                        <p>Optimisez votre processus de recrutement et accroissez votre taux de réussite en programmant
+                            dès maintenant un échange avec l'un de nos consultants.</p>
+                    </div>
+                    <div class="services-cta">
+                        <a href="contact.html" class="cta-button">
+                            <i class="fas fa-phone-alt"></i>
+                            Contactez-nous !
+                        </a>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/img/confcall.jpg" alt="Discussion">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><span>Prenez l'avantage, contactez-nous !</span></p>
+        <span><hr></span>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+            <div class="infos">
+                <h2>Agence Paris</h2>
+                <p><i class="fa-solid fa-location-dot"></i> 47, boulevard de Courcelles</p>
+                <p>75008 Paris</p>
+                <p><i class="fa-solid fa-phone"></i> 06 10 84 00 43</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@linkup-rh.fr</p>
+            </div>
+            <div class="site-map">
+                <h2>Site Map</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="découvrir.html"><i class="fas fa-users"></i> Nous découvrir</a></li>
+                    <li><a href="expertise.html"><i class="fas fa-cogs"></i> Notre Expertise</a></li>
+                    <li><a href="espace-candidat.html"><i class="fas fa-user-tie"></i> Espace Candidat</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <div class="copyright-divider"></div>
+            <div class="copyright-content">
+                <div class="copyright-text">
+                    <p>&copy; 2025 LINKUP RH. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navlinks = document.getElementById('navlinks');
+            const hamburger = document.querySelector('.hamburger');
+            
+            navlinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

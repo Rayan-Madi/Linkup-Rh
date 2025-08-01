@@ -1,0 +1,1312 @@
+/* Import Poppins Font uniquement (comme les autres pages) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-blue: #03ACF3;
+    --secondary-blue: #3B98DF;
+    --dark-blue: #26416FFC;
+    --white: #FFFFFF;
+    --light-gray: #F0F0F0;
+    --black: #000000;
+    --dark-gray: #070707;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* NAVBAR UNIFIÉ - MODIFIÉ POUR CORRESPONDRE AUX AUTRES PAGES */
+nav {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav .logo {
+    width: 200px;
+    height: 80px;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav .navlinks {
+    display: flex;
+    align-items: center;
+}
+
+nav .navlinks ul {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav .navlinks li {
+    list-style: none;
+}
+
+nav .navlinks a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    letter-spacing: 0.3px;
+    position: relative;
+}
+
+nav .navlinks a.active {
+    color: #00ccff;
+}
+
+nav .navlinks a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #007bff, #00ccff);
+}
+
+nav .navlinks a:hover {
+    color: #007bff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #f1f1f1;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 653px;
+    background: linear-gradient(rgba(1, 1, 2, 0.2) 52%, rgba(0, 0, 0, 1) 84%), 
+                url('assets/img/Groupe\ accueil.jpeg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.quote-container {
+    position: relative;
+    max-width: 939px;
+    margin: 70px 0 0 0;
+    background-position: 6px 9px;
+    background-size: 5%;
+    mix-blend-mode: luminosity;
+}
+
+.quote-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 6px 9px;
+    background-size: 5%;
+    opacity: 0.62;
+    mix-blend-mode: luminosity;
+    pointer-events: none;
+}
+
+.quote-text {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 36px;
+    color: var(--white);
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 24px 0 0 0;
+    z-index: 200;
+    text-shadow: 0 2px 8px var(--whi);
+    mix-blend-mode: darken;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+.hero-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98.342%;
+    margin: 0;
+    padding: 0 0 40px 0;
+    margin-right: 2px;
+}
+
+.hero-title h1 {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 61px;
+    font-weight: 300;
+    color: var(--primary-blue);
+    text-decoration: none;
+    padding: 50px 0 0 0;
+    z-index: 200;
+    text-shadow: 0 0 10px var(--black);
+    letter-spacing: -0.5px;
+}
+
+/* Company Info Section - RÉDUIT */
+.company-info {
+    height: 180px;
+    margin: 0;
+    padding: 40px 0 20px 0;
+    background-color: var(--black);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-info h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    font-weight: 300;
+    font-size: 50px;
+    z-index: 200;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    letter-spacing: -0.3px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Services Section - RÉDUIT ET ADAPTÉ POUR 2 COLONNES */
+.services {
+    background-color: var(--black);
+    padding: 0 0 30px 0;
+    z-index: 200;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 450px;
+    z-index: 200;
+    margin-bottom: 30px;
+}
+
+.service-icon {
+    color: var(--primary-blue);
+    margin: 10px 0 0 0;
+    z-index: 200;
+    text-align: center;
+}
+
+.service-icon i {
+    font-size: 50px;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+    display: block;
+}
+
+.service-icon h3 {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 29px;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+    margin-top: 15px;
+    letter-spacing: 0.1px;
+}
+
+/* Services CTA Button */
+.services-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(3, 172, 243, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(3, 172, 243, 0.4);
+    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(3, 172, 243, 0.4);
+}
+
+.cta-button i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0, 4, 8, 0.8) 49%, rgba(6, 6, 6, 0) 72%), 
+                url('https://www.linkup-rh.fr/wp-content/uploads/2023/11/AdobeStock_610794294-scaled.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 730px;
+    background-position: center center;
+    filter: brightness(103%) contrast(110%);
+    mix-blend-mode: luminosity;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 90%;
+    margin: 49px auto 0 auto;
+    z-index: 200;
+    min-height: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-title {
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 33px;
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+}
+
+.about-description {
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+.company-description {
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.company-description h3 {
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0.1px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--primary-blue);
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+/* Distinction Section - CORRIGÉ pour réduire l'espace */
+.distinction {
+    background: linear-gradient(rgba(8, 17, 24, 0.8) 40%, rgba(0, 0, 0, 0.9)), 
+                url('https://www.linkup-rh.fr/wp-content/uploads/2023/10/ld2.jpg');
+    background-color: var(--black);
+    background-position: center left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(100%) contrast(100%);
+    padding: 30px 0 40px 0;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.distinction-content {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    margin: 0;
+    z-index: 200;
+    max-width: 674px;
+}
+
+.distinction-title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.distinction-title h1 {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 60px;
+    font-weight: 300;
+    color: var(--primary-blue);
+    text-transform: none;
+    line-height: 65px;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.distinction-text {
+    text-align: center;
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    width: 100%;
+    letter-spacing: 0.1px;
+}
+
+/* Features Section - CORRIGÉ pour réduire l'espace */
+.features {
+    padding: 0;
+    background-color: var(--black);
+    z-index: 200;
+    height: min-content;
+    margin-top: -20px;
+}
+
+.features-container {
+    display: flex;
+    margin: 0;
+    z-index: 1;
+    padding: 30px 0 50px 0;
+    min-height: 0px;
+}
+
+.feature-card {
+    width: 33%;
+    background: linear-gradient(135deg, #363636 36%, #1F1D1D 79%);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.43);
+    margin: 20px;
+    padding: 30px;
+    z-index: 200;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0;
+    z-index: 200;
+    color: var(--primary-blue);
+    align-self: center;
+}
+
+.feature-icon i {
+    font-size: 80px;
+    color: var(--primary-blue);
+}
+
+.feature-card h5 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 20px 0 10px 0;
+    align-self: center;
+    letter-spacing: 0.1px;
+}
+
+.feature-card p {
+    text-align: center;
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: #f1f1f1;
+    padding: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--black);
+}
+
+footer p span {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-weight: 400;
+}
+
+footer span hr {
+    background-color: var(--primary-blue);
+    width: 10%;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+}
+
+footer > p,
+footer > span {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+footer .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+footer .logo img {
+    width: 70%;
+    height: auto;
+}
+
+footer .infos {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    gap: 5px;
+}
+
+footer .footer-content .infos h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+}
+
+footer .infos {
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-weight: 300;
+}
+
+footer .infos i {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+footer .site-map {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .site-map h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-weight: 400;
+}
+
+footer .site-map ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .site-map li {
+    margin-bottom: 6px;
+}
+
+footer .site-map a {
+    color: #f1f1f1;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+    font-weight: 300;
+}
+
+footer .site-map a:hover {
+    color: #00ccff;
+}
+
+footer .site-map a i {
+    color: #00ccff;
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer .site-map a:hover i {
+    transform: scale(1.2);
+}
+
+/* COPYRIGHT SECTION */
+.copyright {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.copyright-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin-bottom: 30px;
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright-text {
+    flex: 1;
+}
+
+.copyright-text p {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+}
+
+.copyright-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright-links a {
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+    font-family: 'Poppins', sans-serif; /* CHANGÉ : Poppins au lieu d'Inter */
+}
+
+.copyright-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #007bff, #00ccff);
+    transition: width 0.3s ease;
+}
+
+.copyright-links a:hover {
+    color: #00ccff;
+    transform: translateY(-1px);
+}
+
+.copyright-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Navigation responsive - UNIFIÉ */
+    nav .navlinks {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    nav .navlinks.active {
+        left: 0;
+    }
+
+    nav .navlinks ul {
+        flex-direction: column;
+        margin: 50px 0;
+        gap: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .navlinks li {
+        width: 100%;
+    }
+
+    nav .navlinks a {
+        font-size: 18px;
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    nav .logo {
+       width: 180px;
+        height: 60px;
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        min-height: 463px;
+        background-attachment: scroll;
+        background-position: top center;
+        background-size: cover;
+        padding: 0;
+    }
+    
+    .quote-text {
+        font-size: 20px;
+        line-height: 1.4;
+        margin: 50px 0 0 0;
+        padding: 250px 0 0 0;
+    }
+    
+    .hero-title h1 {
+        font-size: 35px;
+        line-height: 1.1;
+        padding: 20px 10px 0 10px;
+        text-align: center;
+    }
+    
+    /* Company Info Mobile - RÉDUIT */
+    .company-info {
+        height: 120px;
+        padding: 30px 0 10px 0;
+    }
+    
+    .company-info h2 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Services Mobile - RÉDUIT ET ADAPTÉ POUR 2 COLONNES EMPILÉES */
+    .services {
+        padding: 0 0 20px 0;
+    }
+    
+    .services-container {
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .service-item {
+        width: 100%;
+        margin-bottom: 25px;
+        max-width: none;
+    }
+    
+    .service-icon i {
+        font-size: 65px;
+    }
+    
+    .service-icon h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 0 15px;
+    }
+    
+    /* CTA Button Mobile */
+    .services-cta {
+        margin-top: 5px;
+        padding: 0 15px;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 15px 25px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .cta-button i {
+        font-size: 16px;
+    }
+    
+    /* About Section Mobile */
+    .about {
+        padding: 50px 0 0 0;
+    }
+    
+    .about-content {
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 95%;
+        max-width: 100%;
+    }
+    
+    .about-title {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    .about-description {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0;
+    }
+    
+    .company-description h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 10px 0;
+    }
+    
+    .tagline {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
+    /* Distinction Section Mobile */
+    .distinction {
+        padding: 20px 20px 30px 20px;
+        min-height: 200px;
+    }
+    
+    .distinction-title h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0 0 10px 0;
+    }
+    
+    .distinction-text {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 0;
+        align-self: center;
+    }
+    
+    /* Features Section Mobile */
+    .features {
+        padding: 10px 10px 0 10px;
+        margin-top: -10px;
+    }
+    
+    .features-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 10px;
+    }
+    
+    .feature-card {
+        width: auto;
+        margin: 0 0 25px 0;
+    }
+    
+    .feature-icon i {
+        font-size: 65px;
+    }
+    
+    .feature-card h5 {
+        line-height: 1.5;
+        margin: 15px 0 10px 0;
+        padding: 0;
+    }
+    
+    /* Footer responsive */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    footer .logo {
+        justify-content: center;
+    }
+    
+    footer .logo img {
+        width: 50%;
+    }
+    
+    footer .site-map {
+        align-items: center;
+    }
+    
+    footer .footer-content .infos h2,
+    footer .site-map h2 {
+        font-size: 1.5rem;
+    }
+    
+    footer p span {
+        font-size: 2rem;
+    }
+    
+    footer .infos {
+        font-size: 0.9rem;
+    }
+    
+    /* Copyright responsive */
+    .copyright-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 15px 25px 15px;
+    }
+    
+    .copyright-links {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav .logo {
+       width: 180px;
+        height: 60px;
+    }
+    
+    nav .navlinks ul {
+        gap: 25px;
+        margin: 0 40px;
+    }
+    
+    nav .navlinks a {
+        font-size: 15px;
+    }
+
+    .hero-title h1 {
+        font-size: 48px;
+    }
+    
+    .quote-text {
+        font-size: 22px;
+    }
+    
+    /* Company Info Tablet - RÉDUIT */
+    .company-info {
+        height: 150px;
+        padding: 35px 0 15px 0;
+    }
+    
+    .company-info h2 {
+        font-size: 40px;
+    }
+    
+    /* Services Tablet - RÉDUIT ET ADAPTÉ POUR 2 COLONNES */
+    .services {
+        padding: 0 0 25px 0;
+    }
+    
+    .services-container {
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .service-item {
+        margin-bottom: 25px;
+        max-width: 400px;
+    }
+    
+    .service-icon h3 {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+    
+    .cta-button {
+        font-size: 15px;
+        padding: 16px 30px;
+    }
+    
+    .about-content {
+        width: 85%;
+        padding: 0 30px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .about-description {
+        font-size: 18px;
+    }
+    
+    .company-description h3 {
+        font-size: 19px;
+    }
+    
+    .tagline {
+        font-size: 24px;
+    }
+    
+    .distinction {
+        min-height: 220px;
+        padding: 25px 20px 35px 20px;
+    }
+    
+    .distinction-title h1 {
+        font-size: 48px;
+        line-height: 55px;
+        margin-bottom: 15px;
+    }
+    
+    .distinction-text {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    
+    .features-container {
+        padding: 25px 20px;
+    }
+    
+    /* Footer Tablet */
+    footer .logo img {
+        width: 60%;
+    }
+    
+    footer .footer-content .infos h2,
+    footer .site-map h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Copyright Tablet */
+    .copyright-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .copyright-links {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+    /* Company Info Large Desktop - RÉDUIT */
+    .company-info {
+        height: 200px;
+        padding: 45px 0 25px 0;
+    }
+    
+    /* Services Large Desktop - ESPACEMENT AMÉLIORÉ POUR 2 COLONNES */
+    .services-container {
+        gap: 60px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .service-item {
+        max-width: 500px;
+    }
+    
+    .about-content {
+        max-width: 1000px;
+    }
+    
+    .about-title {
+        font-size: 36px;
+    }
+    
+    .about-description {
+        font-size: 22px;
+        max-width: 900px;
+    }
+    
+    .company-description h3 {
+        font-size: 22px;
+    }
+    
+    .tagline {
+        font-size: 30px;
+    }
+    
+    .distinction {
+        min-height: 300px;
+        padding: 40px 0 50px 0;
+    }
+    
+    .distinction-title h1 {
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .distinction-text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    /* Footer Large Desktop */
+    footer .logo img {
+        width: 80%;
+    }
+    
+    footer .footer-content .infos h2,
+    footer .site-map h2 {
+        font-size: 2.2rem;
+    }
+    
+    footer .infos {
+        font-size: 1.1rem;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 0 15px;
+    }
+    
+    nav .logo {
+        width: 180px;
+        height: 60px;
+    }
+    
+    .copyright-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .copyright-text p,
+    .copyright-links a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 320px) {
+    nav .logo {
+        width: 120px;
+        height: 24px;
+    }
+    
+    .copyright-content {
+        padding: 0 10px 20px 10px;
+    }
+    
+    .copyright-text p,
+    .copyright-links a {
+        font-size: 0.75rem;
+    }
+}
