@@ -2,7 +2,7 @@
 
 > Un site statique moderne développé pour présenter un projet web responsive et élégant.
 
- 📷 Aperçu
+ 📷 Aperçu :
 
 > https://rayan-madi.github.io/Linkup-Rh/
 
